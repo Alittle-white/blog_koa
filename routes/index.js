@@ -1,4 +1,4 @@
-const bodyParser = require('koa-bodyparser')
+// const bodyParser = require('koa-bodyparser')
 const router = require('koa-router')()
 
 router.get('/', async (ctx, next) => {
@@ -19,6 +19,8 @@ router.get('/json', async (ctx, next) => {
 
 router.get('/get', (ctx, next) => {
   let id = ctx.request.query.id
+  //设置允许跨域
+  ctx.set('Access-Control-Allow-Origin', '*')
   ctx.body = {
     id,
     code: 1
@@ -29,7 +31,7 @@ router.post('/post', ctx => {
   //设置允许跨域
   ctx.set('Access-Control-Allow-Origin', '*')
   ctx.body = {
-    code: 1,
+    code: 200,
     postParams: ctx.request.body
   }
 })
