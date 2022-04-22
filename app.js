@@ -17,8 +17,8 @@ app.use(
           // if (ctx.url === '/test') {
           //     return '*'; // 允许来自所有域名请求
           // }
-          // return 'http://localhost:8080'; //只允许http://localhost:8080这个域名的请求
-          return '*'; // 允许来自所有域名请求
+          return 'http://172.21.40.112:8080'; //只允许http://localhost:8080这个域名的请求
+          // return '*'; // 允许来自所有域名请求
       },
       maxAge: 5, //指定本次预检请求的有效期，单位为秒。
       credentials: true, //是否允许发送Cookie
