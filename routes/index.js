@@ -31,7 +31,7 @@ router.get('/get', (ctx, next) => {
   ) //字段是必需的。它也是一个逗号分隔的字符串，表明服务器支持的所有头信息字段.
   // 服务器收到请求以后，检查了Origin、Access-Control-Request-Method和Access-Control-Request-Headers字段以后，确认允许跨源请求，就可以做出回应。
   // ctx.set('Access-Control-Allow-Credentials', true) // 该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。
-  ctx.set('Access-Control-Allow-Credentials', false) // 该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。
+  // ctx.set('Access-Control-Allow-Credentials', false) // 该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。
   // 当设置成允许请求携带cookie时，需要保证"Access-Control-Allow-Origin"是服务器有的域名，而不能是"*";
 
   ctx.body = {
@@ -54,7 +54,7 @@ router.post('/post', ctx => {
   ) //字段是必需的。它也是一个逗号分隔的字符串，表明服务器支持的所有头信息字段.
   // 服务器收到请求以后，检查了Origin、Access-Control-Request-Method和Access-Control-Request-Headers字段以后，确认允许跨源请求，就可以做出回应。
   // ctx.set('Access-Control-Allow-Credentials', true) // 该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。
-  ctx.set('Access-Control-Allow-Credentials', false) // 该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。
+  // ctx.set('Access-Control-Allow-Credentials', false) // 该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。
   // 当设置成允许请求携带cookie时，需要保证"Access-Control-Allow-Origin"是服务器有的域名，而不能是"*";
 
   ctx.body = {
